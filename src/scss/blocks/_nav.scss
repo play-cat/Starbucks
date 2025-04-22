@@ -28,6 +28,10 @@
     hr {
       display: block;
     }
+
+    &.show {
+      right: 0;
+    }
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -99,8 +103,4 @@
   @media screen and (max-width: 768px) {
     display: flex;
   }
-}
-
-.show {
-  right: 0;
 }
