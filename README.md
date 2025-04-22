@@ -2,11 +2,11 @@
 
 ## Demo
 
-https://play-cat.github.io/StarBucks/
+https://play-cat.github.io/Starbucks/
 
 ## 📸 Screenshot
 
-![Screenshot](https://github.com/play-cat/StarBucks/raw/master/screenshot.jpg)
+![Screenshot](https://github.com/play-cat/Starbucks/raw/master/screenshot.png)
 
 ## 🔧 Technologies
 
