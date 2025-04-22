@@ -1,0 +1,64 @@
+.footer {
+  background-color: var(--footer-bg-color);
+  padding-block: 40px;
+  color: var(--footer-text-color);
+  @include fluid-font-size(15px, 20px);
+  overflow: hidden;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    @include respond('laptop') {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  &__scroll-up {
+    flex: 0 0 84px;
+
+    @include respond('tablet') {
+      flex-basis: 52px;
+    }
+  }
+
+  &__bottom {
+    margin-block-start: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @include respond('tablet') {
+      margin-block-start: 42px;
+    }
+  }
+
+  &__tel {
+    @include fluid-font-size(16px, 26px);
+    font-weight: 500;
+
+    a {
+      background: var(--main-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__socials {
+    position: relative;
+    img {
+      width: 46px;
+      height: 46px;
+
+      @include respond('phone') {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

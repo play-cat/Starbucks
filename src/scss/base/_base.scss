@@ -1,0 +1,82 @@
+/* prettier-ignore */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: rgb(39, 39, 39);
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  @include fluid-font-size(14px, 20px);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.03em;
+  // text-wrap: stable;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-gradient {
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-descr {
+  color: var(--text-color);
+  @include fluid-font-size(12px, 20px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+
+  @include respond('tablet') {
+    text-align: center;
+  }
+}
+
+.round {
+  border-radius: 50% !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+code {
+  background-color: #e9f1f6;
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+pre.code {
+  overflow-x: auto;
+  background-color: #e9f1f6;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+mark {
+  background-color: var(--accent-color);
+  color: #fff;
+}

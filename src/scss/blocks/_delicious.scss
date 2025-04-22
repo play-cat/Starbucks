@@ -1,0 +1,132 @@
+.delicious {
+  padding-block-start: 135px;
+  position: relative;
+  overflow: hidden;
+
+  @include respond('tablet') {
+    padding-block-start: 80px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -2%;
+    bottom: -20%;
+    max-width: 1200px;
+    width: 100%;
+    height: 400px;
+    background-image: url(./../../img/bg-elements/el-2.svg);
+    background-position: right bottom; /* x y */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include respond('desktop-s') {
+      right: -15%;
+    }
+
+    @include respond('laptop') {
+      bottom: -10%;
+      right: -10%;
+    }
+
+    @include respond('tablet') {
+      top: 20%;
+      right: -50%;
+      width: 1200px;
+    }
+
+    @include respond('phone') {
+      top: 26%;
+      right: -45%;
+      transform: rotate(320deg);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    @include respond('laptop') {
+      gap: 40px;
+    }
+
+    @include respond('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    flex: 0 1 460px;
+    position: relative;
+
+    @include respond('laptop') {
+      flex: 0 1 50%;
+    }
+
+    @include respond('tablet') {
+      padding-left: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &__img-wrapper {
+    width: 460px;
+    position: relative;
+    box-shadow: -45px 35px 0px #237249;
+
+    @include respond('laptop') {
+      width: 100%;
+    }
+
+    @include respond('tablet') {
+      width: min(300px, 50%);
+      box-shadow: -15px 15px 0px #237249;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      clip-path: polygon(0% 100%, 0% 0%, 70% 0%, 100% 25%, 100% 100%);
+    }
+  }
+
+  &__content {
+    flex: 0 1 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+
+    @include respond('laptop') {
+      flex: 0 1 50%;
+    }
+
+    @include respond('tablet') {
+      gap: 40px;
+      align-items: center;
+    }
+  }
+
+  &__video {
+    position: relative;
+
+    @include respond('tablet') {
+      width: 385px;
+    }
+
+    &-img {
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: polygon(0% 100%, 0% 0%, 85% 0%, 100% 25%, 100% 100%);
+      }
+    }
+  }
+}

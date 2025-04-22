@@ -1,0 +1,27 @@
+:root {
+  --container-padding: 15px;
+  --container-width: 1300px;
+  // --container-width: min(1200px, 100% - 30px);
+
+  --font-main: 'Montserrat', sans-serif;
+  --font-accent: 'Montserrat', sans-serif;
+  --font-titles: var(--font-main);
+  --font-size: 20px;
+
+  --text-color: #d9d9d9;
+  --second-text-color: #121517;
+  --accent-text-color: #35c66b;
+  --footer-text-color: #bbb3b3;
+  --link-color: var(--text-color);
+
+  --page-bg: #121517;
+  --footer-bg-color: #0b0c0d;
+
+  --main-color: #121517;
+  --second-color: #d9d9d9;
+  --accent-color: #35c66b;
+  --white-color: #fff;
+
+  --main-gradient: linear-gradient(223deg, #237249 0%, #35c66b 100%);
+  --second-gradient: linear-gradient(130deg, #dadadaff 0%, #dadada00 90%);
+}

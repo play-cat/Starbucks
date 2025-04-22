@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  padding-block-start: 48px;
+  z-index: 999;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+
+  @include respond('tablet') {
+    padding-block-end: 24px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 94px;
+    height: 100%;
+
+    @include respond('tablet') {
+      justify-content: space-between;
+    }
+  }
+}

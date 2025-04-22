@@ -1,0 +1,179 @@
+.contacts {
+  padding-block: 135px;
+  position: relative;
+  overflow: hidden;
+
+  @include respond('tablet') {
+    padding-block: 80px;
+  }
+
+  @include respond('phone') {
+    padding-block: 64px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -2%;
+    bottom: -100px;
+    max-width: 1200px;
+    width: 100%;
+    height: 400px;
+    background-image: url(./../../img/bg-elements/el-4.svg);
+    background-position: right bottom; /* x y */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include respond('laptop') {
+      right: -11%;
+    }
+
+    @include respond('tablet') {
+      top: 16%;
+      left: -10%;
+      right: auto;
+      bottom: auto;
+      width: 900px;
+      transform: rotate(28deg);
+    }
+
+    @include respond('phone') {
+      top: 9%;
+      left: -33%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    @include respond('laptop') {
+      gap: 40px;
+    }
+
+    @include respond('tablet') {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    flex: 0 1 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+
+    @include respond('laptop') {
+      flex-basis: 50%;
+    }
+
+    @include respond('tablet') {
+      align-items: center;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include fluid-font-size(22px, 32px);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--white-color);
+  }
+
+  &__insta,
+  &__tel {
+    position: relative;
+    line-height: 57px;
+    padding-inline-start: 70px;
+
+    @include respond('phone') {
+      line-height: 38px;
+      padding-inline-start: 55px;
+    }
+  }
+
+  &__insta {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 57px;
+      height: 57px;
+      background-image: url('./../../img/icons/instagram.svg');
+      background-position: center center; /* x y */
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include respond('phone') {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+
+  &__tel {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 57px;
+      height: 57px;
+      background-image: url('./../../img/icons/phone-call.svg');
+      background-position: center center; /* x y */
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include respond('phone') {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+
+  & &__img {
+    flex: 0 1 400px;
+    position: relative;
+
+    @include respond('laptop') {
+      flex-basis: 50%;
+    }
+
+    @include respond('tablet') {
+      padding-right: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__img-wrapper {
+    width: 400px;
+    box-shadow: 45px 35px 0px #237249;
+
+    @include respond('laptop') {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @include respond('tablet') {
+      box-shadow: 15px 15px 0px #237249;
+    }
+
+    @include respond('tablet') {
+      max-width: min(300px, 50%);
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      clip-path: polygon(0% 100%, 0% 25%, 30% 0%, 100% 0%, 100% 100%);
+    }
+  }
+}

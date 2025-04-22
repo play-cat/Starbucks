@@ -1,0 +1,18 @@
+.logo {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid-font-size(22px, 37px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  color: var(--accent-text-color);
+  // gradient
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

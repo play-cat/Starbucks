@@ -1,0 +1,66 @@
+/* BURGER btn*/
+
+.nav-toggle-btn {
+  display: none;
+
+  flex: 0 0 auto;
+  width: 42px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+
+  &.active {
+    .bar {
+      transition: top var(--time) linear, bottom var(--time) linear,
+        transform var(--time) ease-in var(--time);
+    }
+    .bar:nth-child(1) {
+      transform: translateY(-50%) rotate(45deg);
+      top: 50%;
+    }
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .bar:nth-child(3) {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+  }
+
+  @include respond('tablet') {
+    display: flex;
+  }
+}
+
+.bar {
+  --height: 2px;
+  --time: 0.2s;
+  --background: var(--main-gradient);
+  --border-r: 2px;
+
+  display: block;
+  height: var(--height);
+  width: 100%;
+  background: var(--background);
+  border-radius: var(--border-r);
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  transition: top var(--time) linear var(--time),
+    bottom var(--time) linear var(--time), transform var(--time) ease-in,
+    opacity var(--time) ease-in;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:nth-child(3) {
+    bottom: 0;
+  }
+}

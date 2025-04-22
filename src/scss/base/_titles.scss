@@ -1,0 +1,47 @@
+.title {
+  position: relative;
+  font-family: var(--font-titles);
+  @include fluid-font-size(48px, 80px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-transform: none;
+  z-index: 10;
+
+  & .accent-text {
+    display: inline-block;
+    position: relative;
+    color: var(--accent-text-color);
+    background: var(--main-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+  }
+
+  &_hero {
+    & .accent-text {
+      z-index: -1;
+    }
+
+    @include respond('tablet') {
+      text-align: center;
+    }
+  }
+
+  &_delicious {
+    & .accent-text {
+      z-index: -1;
+    }
+  }
+
+  &_events {
+    & .accent-text {
+      display: block;
+
+      @include respond('tablet') {
+        display: inline-block;
+      }
+    }
+  }
+}

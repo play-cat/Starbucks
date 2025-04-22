@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1rem;
+  color: var(--text-color);
+
+  label {
+    font-weight: 700;
+
+    & span {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--white-color);
+
+    &.error {
+      border-bottom: 1px solid #ff5100;
+    }
+
+    &::placeholder {
+      color: var(--text-color);
+    }
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 80px;
+    height: auto;
+    border-bottom: 1px solid var(--white-color);
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include respond('phone') {
+      min-height: 140px;
+    }
+  }
+
+  &_contact-us {
+    margin-block-start: 40px;
+  }
+}

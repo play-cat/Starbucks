@@ -1,0 +1,38 @@
+<section class="products">
+  <div class="container">
+    <div class="products__top" data-aos="fade-right">
+      <div class="title title_products">
+        <h2>
+          New Our
+          <span class="accent-text glow-before glow-before_right">
+            Products</span
+          >
+        </h2>
+      </div>
+      <div class="section-descr products__text">
+        <p>
+          Have time to buy the most harmonious drinks in the new Starbucks
+          coffee and don't forget about the discount! Starbucks coffee and don't
+          forget about the discount!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-left products__slider">
+    <!-- Slider main container -->
+    <div class="swiper" id="swiper-products">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        @@loop("./../elements/card-product.html",
+        "./../json-data/slider-data.json")
+      </div>
+    </div>
+    <div class="products__navigation">
+      <!-- <div class="slider-prev"></div> -->
+      <div class="slider-next glow-before glow-before_center">
+        <img src="./../../img/icons/slider-btn.svg" alt="next" />
+      </div>
+    </div>
+  </div>
+</section>

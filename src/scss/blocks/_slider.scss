@@ -1,0 +1,28 @@
+.swiper {
+  width: 100%;
+  height: auto;
+
+  @include respond(600) {
+    padding-left: 15px !important;
+  }
+
+  @include respond('phone') {
+    padding-left: 15px !important;
+  }
+
+  &-slide-next {
+    .products__card {
+      background: linear-gradient(var(--page-bg), var(--page-bg)) padding-box,
+        var(--main-gradient) border-box;
+    }
+  }
+
+  &-slide-active {
+    @include respond(599) {
+      .products__card {
+        background: linear-gradient(var(--page-bg), var(--page-bg)) padding-box,
+          var(--main-gradient) border-box;
+      }
+    }
+  }
+}

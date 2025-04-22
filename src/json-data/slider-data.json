@@ -1,0 +1,37 @@
+[
+  {
+    "img": "cup-1",
+    "title": "Cappuccino",
+    "text": "Our cafe will serve you quickly",
+    "price": "7.5",
+    "weight": "400"
+  },
+  {
+    "img": "cup-2",
+    "title": "Macchiato",
+    "text": "Our cafe will serve you quickly",
+    "price": "7.5",
+    "weight": "300"
+  },
+  {
+    "img": "cup-3",
+    "title": "Espresso",
+    "text": "Our cafe will serve you quickly",
+    "price": "7.5",
+    "weight": "320"
+  },
+  {
+    "img": "cup-1",
+    "title": "Cortado",
+    "text": "Our cafe will serve you quickly",
+    "price": "7.5",
+    "weight": "350"
+  },
+  {
+    "img": "cup-2",
+    "title": "Americano",
+    "text": "Our cafe will serve you quickly",
+    "price": "7.5",
+    "weight": "410"
+  }
+]

@@ -1,0 +1,174 @@
+.badge {
+  position: absolute;
+  z-index: 99;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include fluid-font-size(18px, 32px);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transform: translate(-50%, -50%);
+  }
+
+  &_hero {
+    top: -20px;
+    right: 20px;
+
+    @include respond('laptop') {
+      top: 30px;
+      right: 50px;
+    }
+
+    @include respond('tablet') {
+      top: 0;
+      right: 30%;
+    }
+
+    @include respond('phone') {
+      right: 15%;
+    }
+
+    span {
+      @include fluid-font-size(32px, 55px);
+      transform: translate(-50%, -50%) rotate(-15deg);
+    }
+
+    img {
+      width: 168px;
+      height: 168px;
+      filter: drop-shadow(-5px 16px 10px rgba(20, 62, 40, 0.46));
+
+      @include respond('laptop') {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+
+  &_advantages {
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+
+    @include respond('desktop-s') {
+      transform: translate(0%, -50%);
+    }
+
+    span {
+      text-align: center;
+      line-height: 0.86;
+    }
+
+    img {
+      width: 130px;
+      height: 130px;
+      transform: rotate(15deg);
+      filter: drop-shadow(-5px 16px 10px rgba(20, 62, 40, 0.46));
+
+      @include respond('laptop') {
+        width: 120px;
+        height: 120px;
+      }
+
+      @include respond('tablet') {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include respond('phone') {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+
+  &_delicious {
+    top: 0;
+    right: 0;
+
+    @include respond('tablet') {
+      top: 20%;
+      right: 20%;
+    }
+
+    @include respond('phone') {
+      right: 15%;
+    }
+
+    span {
+      @include fluid-font-size(18px, 38px);
+      text-align: center;
+      line-height: 0.86;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      transform: rotate(15deg);
+      filter: drop-shadow(-5px 16px 10px rgba(20, 62, 40, 0.46));
+
+      @include respond('laptop') {
+        width: 120px;
+        height: 120px;
+      }
+
+      @include respond('tablet') {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include respond('phone') {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+
+  &_contacts {
+    left: 0;
+    top: 0;
+
+    @include respond('tablet') {
+      left: 30%;
+      top: 22%;
+    }
+
+    @include respond('phone') {
+      left: 15%;
+      top: 26%;
+    }
+
+    span {
+      @include fluid-font-size(18px, 38px);
+      text-align: center;
+      line-height: 0.86;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      transform: rotate(15deg);
+      filter: drop-shadow(5px 16px 10px rgba(20, 62, 40, 0.46));
+
+      @include respond('laptop') {
+        width: 120px;
+        height: 120px;
+      }
+
+      @include respond('tablet') {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include respond('phone') {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+}
